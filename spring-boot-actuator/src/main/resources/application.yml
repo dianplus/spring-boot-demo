@@ -1,0 +1,39 @@
+spring:
+  main: 
+    {}
+#    web-application-type: none
+server:
+  port: 9055
+  servlet:
+    context-path: /
+info:
+  app:
+    name: '@project.name@'
+    version: '@project.version@'
+    artifactId: '@project.artifactId@'
+    test: test
+management:
+  server:
+    port: 8081
+  endpoint:
+    health:
+      enabled: true
+      show-details: always
+    info:
+      enabled: true
+    prometheus:
+      enabled: true
+  endpoints:
+    enabled-by-default: false
+    web:
+      exposure:
+        include: info,health,prometheus
+  health:
+    db:
+      enabled: false
+    mongo:
+      enabled: false
+  metrics:
+    export:
+      prometheus:
+        enabled: true
