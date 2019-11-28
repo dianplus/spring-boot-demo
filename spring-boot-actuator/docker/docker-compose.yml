@@ -1,0 +1,6 @@
+version: '2'
+services:
+  java-test:
+    image: 'registry.cn-hangzhou.aliyuncs.com/dianjia/java-test:latest'
+    ports:
+      - "8080"
